@@ -9,7 +9,7 @@ function Projects({ lang }) {
   }
 
   return (
-    <section id="projects" className="px-8 py-24 max-w-6xl mx-auto" style={{ borderTop: '1px solid #1a1a1c' }}>
+    <section id="projects" className="px-4 md:px-8 py-24 max-w-6xl mx-auto" style={{ borderTop: '1px solid #1a1a1c' }}>
       <motion.p
         className="text-xs tracking-widest uppercase mb-16"
         style={{ color: '#555558' }}
@@ -31,15 +31,15 @@ function Projects({ lang }) {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[220px] sm:h-[320px] md:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 flex justify-between items-end">
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 flex justify-between items-end">
                 <div>
-                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                  <p className="text-sm mt-1" style={{ color: '#888' }}>{project.category} — {project.year}</p>
+                  <h3 className="text-base md:text-xl font-bold text-white">{project.title}</h3>
+                  <p className="text-xs md:text-sm mt-1" style={{ color: '#888' }}>{project.category} — {project.year}</p>
                 </div>
-                <span className="text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 text-white transition-opacity mt-1">
+                <span className="text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 text-white transition-opacity hidden sm:block">
                   {t[lang].view} →
                 </span>
               </div>

@@ -28,17 +28,18 @@ function Contact() {
   }
 
   return (
-<div style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #111113 50%, #0d0d0f 100%)', minHeight: '100vh' }}>
+    <div style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #111113 50%, #0d0d0f 100%)', minHeight: '100vh' }}>
       <Navbar lang={lang} setLang={setLang} />
 
-      <div className="max-w-6xl mx-auto px-8 pt-40 pb-32">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 pt-40 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
         >
           <p className="text-xs tracking-widest uppercase mb-6" style={{ color: '#555558' }}>{t[lang].title}</p>
-<h1 className="text-5xl font-bold text-white mb-6 max-w-2xl leading-tight">{t[lang].sub}</h1>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-6 max-w-2xl leading-tight">{t[lang].sub}</h1>
           <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#555558' }}>{t[lang].or}</p>
-<a href="mailto:kontakt@serkan-pinske.de" className="text-white text-sm hover:opacity-50 transition-opacity underline underline-offset-4">            kontakt@serkan-pinske.de
+          <a href="mailto:kontakt@serkan-pinske.de" className="text-white text-sm hover:opacity-50 transition-opacity underline underline-offset-4">
+            kontakt@serkan-pinske.de
           </a>
         </motion.div>
 
@@ -68,7 +69,7 @@ function Contact() {
           />
           <button
             type="submit"
-            className="mt-2 px-8 py-4 text-black text-sm font-medium rounded-xl hovery self-start"
+            className="mt-2 px-8 py-4 text-black text-sm font-medium rounded-xl self-start"
             style={{ background: '#ffffff' }}
           >
             {t[lang].send}

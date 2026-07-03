@@ -19,21 +19,19 @@ function Hero({ lang }) {
   }
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-8 pt-24 pb-12 max-w-6xl mx-auto">
+    <section className="min-h-screen flex flex-col justify-center px-4 md:px-8 pt-24 pb-12 max-w-6xl mx-auto">
       <motion.div
-        className="rounded-3xl p-16 relative overflow-hidden"
+        className="rounded-3xl p-8 md:p-16 relative overflow-hidden"
         style={{ background: 'linear-gradient(145deg, #161618 0%, #111113 100%)', border: '1px solid #222224' }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       >
-        {/* Glow */}
         <div className="absolute top-[-150px] right-[-150px] w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)' }} />
 
-        {/* Text */}
         <div className="relative z-10">
           <motion.h1
-            className="text-7xl font-bold text-white leading-tight tracking-tight mb-16"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight mb-8 md:mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}

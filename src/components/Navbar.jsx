@@ -19,19 +19,17 @@ function Navbar({ lang, setLang }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="w-full px-8 py-5 grid items-center" style={{ gridTemplateColumns: '1fr auto 1fr' }}>
+      <div className="w-full px-4 md:px-8 py-4 md:py-5 grid items-center" style={{ gridTemplateColumns: '1fr auto 1fr' }}>
 
-        {/* Links */}
         <div>
-          <p className="text-white text-sm font-medium">Serkan David Pinske</p>
-          <p className="text-xs" style={{ color: '#555558' }}>Web & Security Freelancer</p>
+          <p className="text-white text-xs md:text-sm font-medium">Serkan David Pinske</p>
+          <p className="text-xs hidden sm:block" style={{ color: '#555558' }}>Web & Security Freelancer</p>
         </div>
 
-        {/* Mitte — Toggle */}
         <div className="flex items-center rounded-full p-1" style={{ background: '#161618', border: '1px solid #222224' }}>
           <Link
             to="/"
-            className="relative px-5 py-1.5 text-xs rounded-full transition-colors duration-200"
+            className="relative px-3 md:px-5 py-1.5 text-xs rounded-full transition-colors duration-200"
             style={{ color: isHome ? 'white' : '#555558' }}
           >
             {isHome && (
@@ -46,7 +44,7 @@ function Navbar({ lang, setLang }) {
           </Link>
           <Link
             to="/info"
-            className="relative px-5 py-1.5 text-xs rounded-full transition-colors duration-200"
+            className="relative px-3 md:px-5 py-1.5 text-xs rounded-full transition-colors duration-200"
             style={{ color: isInfo ? 'white' : '#555558' }}
           >
             {isInfo && (
@@ -61,8 +59,7 @@ function Navbar({ lang, setLang }) {
           </Link>
         </div>
 
-        {/* Rechts */}
-        <div className="flex items-center justify-end gap-6">
+        <div className="flex items-center justify-end gap-3 md:gap-6">
           <Link
             to="/contact"
             className="text-xs transition-colors hover:text-white relative pb-1"
