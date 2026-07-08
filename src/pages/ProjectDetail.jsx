@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
+import AmaraStudioCaseStudy from './AmaraStudioCaseStudy'
 
 function ProjectDetail() {
   const { id } = useParams()
@@ -11,6 +12,10 @@ function ProjectDetail() {
       <p style={{ color: '#555558' }}>Projekt nicht gefunden.</p>
     </div>
   )
+
+  if (project.id === 'friseursalon') {
+    return <AmaraStudioCaseStudy project={project} />
+  }
 
   return (
     <div style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #111113 50%, #0d0d0f 100%)', minHeight: '100vh' }}>
@@ -45,6 +50,19 @@ function ProjectDetail() {
         >
           {project.description}
         </motion.p>
+
+        {project.liveUrl && (
+          <motion.a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-8 px-8 py-4 text-black text-sm font-medium rounded-xl transition-opacity hover:opacity-80"
+            style={{ background: '#ffffff' }}
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Live ansehen ↗
+          </motion.a>
+        )}
       </div>
 
       <motion.div
@@ -71,7 +89,24 @@ function ProjectDetail() {
               <span className="text-xs tracking-widest uppercase" style={{ color: '#333336' }}>{section.number}</span>
               <h2 className="text-lg font-bold text-white mt-1">{section.title}</h2>
             </div>
-            <p className="md:col-span-3 leading-relaxed" style={{ color: '#555558' }}>{section.text}</p>
+            <div className="md:col-span-3">
+              <p className="leading-relaxed" style={{ color: '#555558' }}>{section.text}</p>
+              {section.images && section.images.length > 0 && (
+                <div className={`mt-8 grid gap-4 ${section.images.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+                  {section.images.map((shot) => (
+                    <div key={shot.src}>
+                      <img
+                        src={shot.src}
+                        alt={shot.caption}
+                        className="w-full rounded-2xl"
+                        style={{ border: '1px solid #1a1a1c' }}
+                      />
+                      <p className="text-xs mt-3" style={{ color: '#555558' }}>{shot.caption}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>

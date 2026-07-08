@@ -1,25 +1,14 @@
 export const projects = [
   {
     id: 'friseursalon',
-    title: 'Friseursalon Bella',
+    title: 'Amara Studio',
     category: 'Web Design & Development',
-    year: '2025',
-    description: 'Moderne Website für einen lokalen Friseursalon mit Online-Terminbuchung und Galeriebereich.',
-    tags: ['React', 'Tailwind', 'Vite'],
-    image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80',
-    color: '#f5f0eb',
-    sections: [
-      {
-        number: '01',
-        title: 'Überblick',
-        text: 'Der Kunde benötigte eine moderne Online-Präsenz um Neukunden zu gewinnen und Termine online buchbar zu machen.',
-      },
-      {
-        number: '02',
-        title: 'Lösung',
-        text: 'Eine schnelle, mobiloptimierte Website mit integriertem Buchungssystem und Galerie für aktuelle Arbeiten.',
-      },
-    ],
+    year: '2026',
+    description: 'Volles Buchungssystem für einen Beauty-Salon — kein Mockup, sondern eine produktiv nutzbare Web-App mit echter Datenbank, Admin-Bereich und automatisierten E-Mails.',
+    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
+    image: '/projects/amara-studio/hero-crop.png',
+    color: '#ece7e0',
+    liveUrl: 'https://demo-salon-henna.vercel.app',
   },
   {
     id: 'restaurant',
