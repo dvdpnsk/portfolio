@@ -199,25 +199,23 @@ function AmaraStudioCaseStudy({ project }) {
         <div className="py-20" style={{ borderTop: `1px solid ${BORDER}` }}>
           <div className="max-w-6xl mx-auto px-8">
             <div className="grid gap-8 md:grid-cols-2 items-start">
-              <Reveal>
+              <Reveal delay={0.1} className="md:col-start-2 md:row-start-1">
+                <Eyebrow>Buchung</Eyebrow>
+                <FeatureTitle>Buchen, nicht ausfüllen.</FeatureTitle>
+                <FeatureText>
+                  Kund:innen wählen ihren Service aus allen Kategorien — Haare, Nägel, Augenbrauen
+                  oder Pflege —, dann die gewünschte Person oder einfach „egal, Hauptsache schnell“.
+                  Freie Termine werden live aus dem Kalender berechnet, inklusive Vorlaufzeit. Der
+                  ganze Ablauf dauert selten länger als eine Minute. Ein Kundenkonto braucht
+                  niemand: Jede Buchung bekommt einen eigenen, sicheren Link zur Verwaltung.
+                </FeatureText>
+              </Reveal>
+              <Reveal className="md:col-start-1 md:row-start-1 md:row-span-2">
                 <BrowserFrame src="/projects/amara-studio/buchungsflow-1-service.png" alt="Serviceauswahl" />
               </Reveal>
-              <div className="flex flex-col gap-8">
-                <Reveal delay={0.1}>
-                  <Eyebrow>Buchung</Eyebrow>
-                  <FeatureTitle>Buchen, nicht ausfüllen.</FeatureTitle>
-                  <FeatureText>
-                    Kund:innen wählen ihren Service aus allen Kategorien — Haare, Nägel, Augenbrauen
-                    oder Pflege —, dann die gewünschte Person oder einfach „egal, Hauptsache schnell“.
-                    Freie Termine werden live aus dem Kalender berechnet, inklusive Vorlaufzeit. Der
-                    ganze Ablauf dauert selten länger als eine Minute. Ein Kundenkonto braucht
-                    niemand: Jede Buchung bekommt einen eigenen, sicheren Link zur Verwaltung.
-                  </FeatureText>
-                </Reveal>
-                <Reveal delay={0.2}>
-                  <BrowserFrame src="/projects/amara-studio/buchungsflow-3-termin.png" alt="Terminauswahl" />
-                </Reveal>
-              </div>
+              <Reveal delay={0.2} className="md:col-start-2 md:row-start-2">
+                <BrowserFrame src="/projects/amara-studio/buchungsflow-3-termin.png" alt="Terminauswahl" />
+              </Reveal>
             </div>
           </div>
         </div>
@@ -251,26 +249,24 @@ function AmaraStudioCaseStudy({ project }) {
         <div className="py-20" style={{ borderTop: `1px solid ${BORDER}` }}>
           <div className="max-w-6xl mx-auto px-8">
             <div className="grid gap-8 md:grid-cols-2 items-start">
-              <Reveal>
+              <Reveal delay={0.1} className="md:col-start-2 md:row-start-1">
+                <Eyebrow>Unterwegs</Eyebrow>
+                <FeatureTitle>Das Büro passt in die Hosentasche.</FeatureTitle>
+                <FeatureText>
+                  Das komplette Dashboard — Buchungen, Services, Team, Arbeitszeiten und Finanzen —
+                  ist genauso durchdacht für den schmalen Bildschirm gebaut wie für den großen. Die
+                  Navigation klappt auf dem Handy zu einem kompakten Menü zusammen, damit auch mit
+                  einer Hand alles erreichbar bleibt. Ob am Empfangstresen zwischen zwei Terminen
+                  oder unterwegs: ein neuer Preis oder eine kurzfristige Änderung ist in Sekunden
+                  erledigt.
+                </FeatureText>
+              </Reveal>
+              <Reveal className="md:col-start-1 md:row-start-1 md:row-span-2">
                 <PhoneFrame src="/projects/amara-studio/admin-mobile-dropdown.jpeg" alt="Admin-Navigation mobil" />
               </Reveal>
-              <div className="flex flex-col gap-8">
-                <Reveal delay={0.1}>
-                  <Eyebrow>Unterwegs</Eyebrow>
-                  <FeatureTitle>Das Büro passt in die Hosentasche.</FeatureTitle>
-                  <FeatureText>
-                    Das komplette Dashboard — Buchungen, Services, Team, Arbeitszeiten und Finanzen —
-                    ist genauso durchdacht für den schmalen Bildschirm gebaut wie für den großen. Die
-                    Navigation klappt auf dem Handy zu einem kompakten Menü zusammen, damit auch mit
-                    einer Hand alles erreichbar bleibt. Ob am Empfangstresen zwischen zwei Terminen
-                    oder unterwegs: ein neuer Preis oder eine kurzfristige Änderung ist in Sekunden
-                    erledigt.
-                  </FeatureText>
-                </Reveal>
-                <Reveal delay={0.2}>
-                  <BrowserFrame src="/projects/amara-studio/admin-uebersicht-desktop.png" alt="Admin-Übersicht Desktop" url="…/admin" />
-                </Reveal>
-              </div>
+              <Reveal delay={0.2} className="md:col-start-2 md:row-start-2">
+                <BrowserFrame src="/projects/amara-studio/admin-uebersicht-desktop.png" alt="Admin-Übersicht Desktop" url="…/admin" />
+              </Reveal>
             </div>
           </div>
         </div>
