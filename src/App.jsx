@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* Seitenweiter Lichtstrahl-Hintergrund (fix, hinter allen Seiten) */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0, opacity: 0.8 }}>
         <LightRays
           raysOrigin="top-center"
           raysColor="#93d3dd"
@@ -18,8 +18,8 @@ function App() {
           rayLength={3}
           fadeDistance={1}
           saturation={1}
-          followMouse
-          mouseInfluence={0.4}
+          followMouse={false}
+          mouseInfluence={0}
           noiseAmount={0}
           distortion={0}
         />
