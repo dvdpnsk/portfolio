@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import LightRays from './LightRays'
 
 function Hero({ lang }) {
   const t = {
@@ -23,28 +22,12 @@ function Hero({ lang }) {
     <section className="min-h-screen flex flex-col justify-center px-4 md:px-8 pt-24 pb-12 max-w-6xl mx-auto">
       <motion.div
         className="rounded-3xl p-8 md:p-16 relative overflow-hidden"
-        style={{ background: 'linear-gradient(145deg, #161618 0%, #111113 100%)', border: '1px solid #222224' }}
+        style={{ background: 'linear-gradient(145deg, rgba(22,22,24,0.55) 0%, rgba(17,17,19,0.55) 100%)', border: '1px solid #222224' }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="absolute top-[-150px] right-[-150px] w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)' }} />
-
-        <div className="absolute inset-0" style={{ zIndex: 1 }}>
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#93d3dd"
-            raysSpeed={0.6}
-            lightSpread={0.5}
-            rayLength={3}
-            fadeDistance={1}
-            saturation={1}
-            followMouse
-            mouseInfluence={0.4}
-            noiseAmount={0}
-            distortion={0}
-          />
-        </div>
 
         <div className="relative z-10">
           <motion.h1
