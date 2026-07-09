@@ -90,7 +90,7 @@ const TECH = ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Vercel']
 function AmaraStudioCaseStudy({ project }) {
   return (
     <LightboxProvider>
-      <div style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #111113 50%, #0d0d0f 100%)', minHeight: '100vh' }}>
+      <div style={{ minHeight: '100vh' }}>
         <nav className="fixed top-0 w-full z-50" style={{ borderBottom: `1px solid ${BORDER}`, background: 'rgba(10,10,10,0.8)', backdropFilter: 'blur(12px)' }}>
           <div className="max-w-6xl mx-auto px-8 py-5 flex justify-between items-center">
             <Link to="/" className="text-xs tracking-widest uppercase hover:text-white transition-colors" style={{ color: MUTED }}>

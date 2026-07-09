@@ -28,7 +28,7 @@ function Contact() {
   }
 
   return (
-    <div style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #111113 50%, #0d0d0f 100%)', minHeight: '100vh' }}>
+    <div style={{ minHeight: '100vh' }}>
       <Navbar lang={lang} setLang={setLang} />
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 pt-40 pb-32">
