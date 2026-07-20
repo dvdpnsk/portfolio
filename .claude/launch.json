@@ -6,6 +6,13 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "preview"],
       "port": 4173
+    },
+    {
+      "name": "restaurant-mezze",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "C:\\Users\\davpi\\Desktop\\Projekte\\Restaurant"],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }
